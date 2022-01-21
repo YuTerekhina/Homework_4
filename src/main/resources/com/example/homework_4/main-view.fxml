@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ComboBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.homework_4.FileManagerController">
+    <MenuBar>
+        <Menu text="Menu">
+        <MenuItem text="Exit" onAction="#onExitSelect"/>
+        </Menu>
+    </MenuBar>
+    <HBox>
+        <ComboBox/>
+        <TextField HBox.hgrow="ALWAYS" editable="false"/>
+        <Button text="Вверх"/>
+    </HBox>
+    <TableView fx:id="filesTable" VBox.vgrow="ALWAYS"/>
+    <TextArea fx:id="tipArea" VBox.vgrow="ALWAYS" editable="false"/>
+    <HBox spacing="5">
+        <Button text="Копировать файл" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button text="Переместить файл" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button text="Удалить файл" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button text="Выход из программы" maxWidth="Infinity" HBox.hgrow="ALWAYS" onAction="#onExitSelect"/>
+    </HBox>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+    </padding>
+
+</VBox>
